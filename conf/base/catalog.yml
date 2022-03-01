@@ -1,0 +1,17 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+urls:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/urls.csv
+
+features:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/features.csv
+
+search:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/search.pickle
+  versioned: true
